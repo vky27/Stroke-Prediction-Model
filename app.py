@@ -57,15 +57,13 @@ def result():
     x=np.array([age,hypertension,heart_disease,avg_glucose_level,bmi,smoking_status,gender,ever_married,
                 Govt_job,Private,Self_Employed,Children,Residence_type]).reshape(1,-1)
 
-    scaler_path= r"models\scaler.pkl"
-    scaler=None
-    with open(scaler_path,'rb') as scaler_file:
-        scaler=pickle.load(scaler_file)
+    
+    scaler=pickle.load(open('scaler.pkl','rb'))
 
     x=scaler.transform(x)
 
-    model_path= r"models\sv.sav"
-    sv=joblib.load(model_path)
+    
+    sv=joblib.load(open('sv.sav','rb'))
 
     Y_pred=sv.predict(x)
 
@@ -76,4 +74,4 @@ def result():
         return render_template('stroke.html')
 
 if __name__=="__main__":
-    app.run(debug=True,port=2727)
+    app.run(debug=True)
