@@ -1,3 +1,2 @@
-Tutorial Link of First Part (Train and Test):- https://youtu.be/JzgG-fiQAVI
-
-Tutorial Link of Second Part (Web Deployment):- https://youtu.be/xP8HqUIIOFo
+The Link for Web Deployment is : https://strokify.herokuapp.com/
+************** This is only an app built using Machine Learning. Take this as a possible Indication and always consult your doctor :)********************* 
